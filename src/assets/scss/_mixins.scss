@@ -1,0 +1,38 @@
+//Mixins
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin: $top $right $bottom $left;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}
+
+@mixin width($min, $val, $max) {
+  min-width: $min;
+  width: $val;
+  max-width: $max;
+}
+
+@mixin height($min, $val, $max) {
+  min-height: $min;
+  height: $val;
+  max-height: $max;
+}
+
+@mixin flex($display, $direction, $justify, $align) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin font-face($family, $style, $weight, $size, $height, $align, $decoration) {
+  font-family: $family;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  text-align: $align;
+  text-decoration-line: $decoration;
+}

@@ -1,0 +1,44 @@
+//Rowdies font
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+//Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+// fonts
+$default_font : Montserrat;
+$heading_font : Rowdies;
+
+// colors
+$default_white : #ffffff;
+$default_black : #000000;
+
+$primary_Red : #EB3535;
+$red_berry_Red : #FE3B1F;
+
+$primary_Stroke : #525557;
+$primary_bg : radial-gradient(50% 50% at 50% 50%, #0C0D0E 0%, #151718 73.44%);
+
+$input_color : #525557;
+$input_border_color : #454545;
+
+
+// Langing
+$langing_button_width: 395px;
+$langing_button_height: 79px;
+$langing_button_border_radius : 50px;
+
+$langing_button_font_size : 24px;
+$langing_button_line_height : 29px;
+$langing_button_bg_color : #FE3B1F;
+
+//inputs
+$input_width : 454px;
+$input_height : 54px;
+$input_font_size : 14px;
+$input_line_height : 17px;
+
+
+//langing
+$langing_font_size : 96px;
+$langing_line_height : 119px;
+

@@ -1,0 +1,12 @@
+@import "src/assets/scss/mixins";
+@import "src/assets/scss/variables";
+
+html, body {
+  @include margin(0,0,0,0);
+  @include padding(0,0,0,0);
+  @include width(none, 100%, none);
+  @include height(none, 100vh, none);
+  @include font-face($default_font, normal, normal, none, none, center, none);
+  background: $primary_bg;
+  mix-blend-mode: normal;
+}

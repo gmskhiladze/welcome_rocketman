@@ -1,0 +1,147 @@
+@import "src/assets/scss/mixins";
+@import "src/assets/scss/variables";
+
+.langing__container{
+  @include margin(0,0,0,0);
+  @include padding(0,0,0,0);
+  @include width(none, 100%, none);
+  @include height(none, 100vh, none);
+  @include flex(flex, column, space-around, center);
+
+  background-image: url("../../assets/stars.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  .header__container{
+    @include width(none, fit-content, none);
+
+    .header{
+      cursor: default;
+      user-select: none;
+      @include font-face($heading_font, normal, 400, $langing_font_size, 119px, center, none);
+      color: $red_berry_Red;
+    }
+  }
+
+  .button__container{
+    @include flex(flex, column, center, center);
+
+    .btn {
+      cursor: pointer;
+      @include margin(9px, 9px, 9px, 9px);
+      @include padding(0,0,0,0);
+      @include width(none, $langing_button_width, none);
+      @include height(none,$langing_button_height, none);
+      @include flex(flex, row, center, center);
+      color: $default_white;
+      border: none;
+      border-radius: $langing_button_border_radius;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn__start{
+      @include font-face($default_font, normal, 400, $langing_button_font_size, $langing_line_height, center, none);
+      background: $langing_button_bg_color;
+    }
+
+    .btn__submitted_applications{
+      @include font-face($default_font, normal, 400, $langing_button_font_size, $langing_line_height, center, underline);
+      background: transparent;
+    }
+
+    :hover{
+      transform: scale(1.03);
+    }
+  }
+
+  .rocketman__container {
+    @include width(none, fit-content, none);
+    @include margin(40px, 0, 0, 0);
+    transform: rotate(-30deg);
+    animation: flyDude 10s infinite linear;
+  }
+
+  @keyframes flyDude {
+    0%{
+      transform: rotate(-30deg) translate(0, 0);
+    }
+
+    25% {
+      transform: rotate(-25deg) translate(5px, 5px);
+    }
+
+    50% {
+      transform: rotate(-20deg) translate(0px, 0px);
+    }
+
+    75% {
+      transform: rotate(-25deg) translate(-5px, -5px);
+    }
+
+    100%{
+      transform: rotate(-30deg) translate(0, 0);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .langing__container{
+    .header__container{
+      .header{
+        @include font-face($heading_font, normal, 400, 64px, 119px, center, none);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .langing__container{
+    .header__container{
+      @include width(none, 80%, none);
+
+      .header{
+        @include margin(0, 0, 0, 0);
+        @include font-face($heading_font, normal, 400, 64px, auto, center, none);
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .langing__container{
+    .header__container{
+      @include width(none, 80%, none);
+
+      .header{
+        @include margin(0, 0, 0, 0);
+        @include font-face($heading_font, normal, 400, 46px, auto, center, none);
+      }
+    }
+
+    .button__container{
+      .btn {
+        cursor: pointer;
+        @include padding(0,0,0,0);
+        @include width(none, #{$langing_button_width - $langing_button_width/4}, none);
+        @include height(none,$langing_button_height, none);
+        @include flex(flex, row, center, center);
+        color: $default_white;
+        border: none;
+        border-radius: $langing_button_border_radius;
+        transition: 0.3s ease-in-out;
+      }
+
+      .btn__start{
+        @include font-face($default_font, normal, 400, #{$langing_button_font_size - $langing_button_font_size/5}, $langing_line_height/2, center, none);
+        background: $langing_button_bg_color;
+      }
+
+      .btn__submitted_applications{
+        @include font-face($default_font, normal, 400, #{$langing_button_font_size - $langing_button_font_size/5}, $langing_line_height/4, center, underline);
+        background: transparent;
+      }
+    }
+  }
+}
