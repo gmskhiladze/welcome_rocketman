@@ -1,2 +1,144 @@
 @import "src/assets/scss/mixins";
 @import "src/assets/scss/variables";
+
+h1 {
+  @include width(none, 100%, none);
+  @include flex(flex, row, center, center);
+  @include font-face($heading_font, normal, normal, 64px, 79px, center, none);
+  color: $red_berry_Red;
+  user-select: none;
+}
+
+span {
+  @include width(none, 716px, none);
+  @include font-face($default_font, normal, normal, 24px, 48px, start, none);
+  color: $default_white;
+}
+
+svg {
+  pointer-events: none;
+}
+
+.container {
+  @include margin(0,0,0,0);
+  @include padding(0,0,0,0);
+  @include width(none, 100%, none);
+  @include height(100vh, 100vh, none);
+  @include flex(flex, row, center, center);
+
+  .panel {
+    @include width(none, 50%, none);
+    @include height(100vh, 100vh, none);
+    @include flex(flex, column, center, center);
+  }
+
+  .left__panel{
+    @include width(none, 50%, none);
+    @include height(100vh, 100vh, none);
+    @include flex(flex, column, start, center);
+    background: $default_white;
+
+    .left__panel__title, .left__panel__inputs, .left__panel__navigation{
+      @include width(none, 716px, none);
+      @include flex(flex, row, center, center);
+    }
+
+    .left__panel__title{
+      @include margin(100px,0,0,0);
+      cursor: default;
+    }
+
+    .left__panel__inputs{
+      @include flex(flex, column, center, center);
+
+      form {
+        @include width(none, 100%, none);
+        @include flex(flex, column, center, center);
+
+        .form__group {
+          position: relative;
+
+          .input__text, .input__email, .input__tel {
+            @include margin(25px, 25px, 25px, 25px);
+            @include padding(0, 0, 0, 57px);
+            @include width(none, 455px, none);
+            @include height(none, 54px, none);
+            @include flex(flex, none, center, center);
+            @include font-face($default_font, italic, normal, $input_font_size, $input_line_height, none, none);
+            color: $input_color;
+            background: $default_white;
+            border-radius: 0;
+            border: 1px solid $input_border_color;
+            box-sizing: border-box;
+          }
+
+          .error__message {
+            @include font-face($default_font, italic, 400, 12px, 13px, none, none);
+            color: $red_berry_Red;
+            position: absolute;
+            bottom: 0;
+            left: 85px;
+          }
+        }
+      }
+    }
+
+    .left__panel__navigation {
+
+    }
+  }
+  .right__panel{
+    user-select: none;
+    @include width(none, 50%, none);
+    @include height(100vh, 100vh, none);
+    @include flex(flex, column, start, center);
+    background: radial-gradient(50% 50% at 50% 50%, #0C0D0E 0%, #151718 73.44%);
+
+    .right__panel__title, .right__panel__description{
+      @include width(none, 716px, none);
+      @include flex(flex, row, center, center);
+    }
+
+    .right__panel__title{
+      @include margin(100px,0,0,0);
+      cursor: default;
+    }
+
+    .right__panel__description{
+      @include margin(100px,0,0,0);
+      @include width(none, 550px, none);
+    }
+  }
+
+  .pagination{
+    @include margin(80px, 25px, 50px, 25px);
+    @include flex(flex, row, center, center);
+
+    .circles{
+      @include margin(0, 10px, 0, 10px);
+      @include flex(flex, none, center, center);
+
+      .circle{
+        cursor: pointer;
+        @include margin(0, 5px, 0, 5px);
+        @include flex(flex, none, center, center);
+        opacity: 50%;
+        border: none;
+        background: transparent;
+      }
+
+      .selected {
+        opacity: 100%;
+      }
+    }
+
+    .arrowLeft, .arrowRight{
+      @include flex(flex, none, center, center);
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+  }
+
+
+}
